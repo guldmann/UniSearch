@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pcis.common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pcis.common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfIndexFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndexFile" nillable="true" type="tns:IndexFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndexFile" nillable="true" type="tns:ArrayOfIndexFile" />
+  <xs:complexType name="IndexFile">
+    <xs:sequence>
+      <xs:element name="_x003C_Extension_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Folder_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MD5_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_type_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IndexFile" nillable="true" type="tns:IndexFile" />
+</xs:schema>

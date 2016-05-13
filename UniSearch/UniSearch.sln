@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSearch", "UniSearch\UniSearch.csproj", "{19230560-0FE0-45D7-B6DD-CAE50AEC3A78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexServiceLibrary", "IndexServiceLibrary\IndexServiceLibrary.csproj", "{0DCE89F2-6E8A-430C-9413-36CFA289E7E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pcis.common", "Pcis.common\Pcis.common.csproj", "{B74C64CD-1A9A-4D28-960B-EE13B1886BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSearchServer", "UniSearchServer\UniSearchServer.csproj", "{52035384-4FBD-49AB-9587-F2B4C9781D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFServer", "WPFServer\WPFServer.csproj", "{5947E199-9C8F-46AF-B933-8FE7D76E3088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SipleLogger", "..\simplelogger\SipleLogger\SipleLogger.csproj", "{D8BB0A98-D416-4EAB-B228-3561371539C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19230560-0FE0-45D7-B6DD-CAE50AEC3A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19230560-0FE0-45D7-B6DD-CAE50AEC3A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19230560-0FE0-45D7-B6DD-CAE50AEC3A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19230560-0FE0-45D7-B6DD-CAE50AEC3A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCE89F2-6E8A-430C-9413-36CFA289E7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCE89F2-6E8A-430C-9413-36CFA289E7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCE89F2-6E8A-430C-9413-36CFA289E7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCE89F2-6E8A-430C-9413-36CFA289E7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74C64CD-1A9A-4D28-960B-EE13B1886BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74C64CD-1A9A-4D28-960B-EE13B1886BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74C64CD-1A9A-4D28-960B-EE13B1886BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74C64CD-1A9A-4D28-960B-EE13B1886BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52035384-4FBD-49AB-9587-F2B4C9781D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52035384-4FBD-49AB-9587-F2B4C9781D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52035384-4FBD-49AB-9587-F2B4C9781D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52035384-4FBD-49AB-9587-F2B4C9781D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5947E199-9C8F-46AF-B933-8FE7D76E3088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5947E199-9C8F-46AF-B933-8FE7D76E3088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5947E199-9C8F-46AF-B933-8FE7D76E3088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5947E199-9C8F-46AF-B933-8FE7D76E3088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BB0A98-D416-4EAB-B228-3561371539C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BB0A98-D416-4EAB-B228-3561371539C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BB0A98-D416-4EAB-B228-3561371539C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BB0A98-D416-4EAB-B228-3561371539C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
