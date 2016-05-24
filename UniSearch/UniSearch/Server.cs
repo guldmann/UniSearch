@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniSearch
 {
@@ -13,9 +7,10 @@ namespace UniSearch
     {
         public  string url { get; set; }
         public string name { get; set; }
-        public string port { get; set; }
+        public string port { get; set; } = "808";
         public string passWord { get; set; }
         public string userName { get; set; }
-        public bool local { get; set; }
+        public bool localserver { get; set; } = false; 
+        public string dnsItentity { get; set; }
     }
 }

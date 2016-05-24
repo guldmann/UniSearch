@@ -13,7 +13,8 @@ namespace UniSearchServer
     public partial class FormAddUser : Form
     {
         public string Username = "";
-        public string Password = ""; 
+        public string Password = "";
+
         public FormAddUser()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace UniSearchServer
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-            
+
         }
 
         private bool ValidateForm()
@@ -52,5 +53,6 @@ namespace UniSearchServer
         {
             this.Close();
         }
+
     }
 }

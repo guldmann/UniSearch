@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 using System.ServiceModel;
@@ -15,6 +16,7 @@ namespace UniSearchServer
         private ServiceHost _host;
         SimpleLogger _log = new SimpleLogger();
         IndexService _indexService = new IndexService();
+        
 
         public UniSearchServer()
         {

@@ -64,7 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SipleLogger\SipleLogger\SipleLogger.csproj">
+    <ProjectReference Include="..\..\simplelogger\SipleLogger\SipleLogger.csproj">
       <Project>{d8bb0a98-d416-4eab-b228-3561371539c1}</Project>
       <Name>SipleLogger</Name>
     </ProjectReference>

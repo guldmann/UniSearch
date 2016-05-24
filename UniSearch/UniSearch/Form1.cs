@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Security;
 using System.Windows.Forms;
 using System.Threading;
 using UniSearch.IndexServiceReference;
+using System.Runtime.Serialization.Formatters.Binary;
+using IFormatter = System.Runtime.Serialization.IFormatter;
 using Pcis.common;
+using System.Runtime.Serialization;
 
 namespace UniSearch
 {
@@ -22,7 +26,20 @@ namespace UniSearch
             // TODO open server list from file "deserialize" here 
             //TODO save user (server) passwords in a password protected cryptated file ? 
 
+            OpenServerList();
 
+        }
+
+        private void OpenServerList()
+        {
+            string ServerFile = "serverFile.bin";
+            if (File.Exists(ServerFile))
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream(ServerFile, FileMode.Open, FileAccess.Read, FileShare.Read);
+                ServerList.AddRange((List<Server>)formatter.Deserialize(stream));
+                stream.Close();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
