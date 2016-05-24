@@ -23,11 +23,8 @@ namespace UniSearch
         public Form1()
         {
             InitializeComponent();
-            // TODO open server list from file "deserialize" here 
-            //TODO save user (server) passwords in a password protected cryptated file ? 
-
+            
             OpenServerList();
-
         }
 
         private void OpenServerList()
@@ -89,15 +86,7 @@ namespace UniSearch
             proxy.ClientCredentials.UserName.Password = server.passWord;
 
             proxy.Endpoint.Address = new EndpointAddress(new Uri(server.url));
-
-
-            /*
-
-            IndexServiceClient proxy = new IndexServiceClient();
-            proxy.ClientCredentials.UserName.UserName = "john"; // ändra denna 
-            proxy.ClientCredentials.UserName.Password = "gopaet69";//ändra denna 
-            proxy.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
-            */
+            
             try
             {
                 proxy.Open();
@@ -114,50 +103,29 @@ namespace UniSearch
                     labelSearchTimeValue.Text = resultTime.TotalMilliseconds + "millisec";
                     PopulateListView(lst);
                     labelFilesValue.Text = lst.Count.ToString(); 
-
-                }
-               
+                }               
                 proxy.Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Connection failed: " + ex.Message);
-            }
-
-
-           
+            }           
         }
 
         private void PopulateListView(List<IndexServiceReference.IndexFile> resultList)
-        {
-            //var diResult = new DialogResult(); 
-            //if (resultList.Count >= 2000)
-            //{
-             //    diResult  = MessageBox.Show($"Found {resultList.Count} Update list will be slow {Environment.NewLine} Show result ?", "Large result warning!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning); 
-           // }
-           // else if(resultList.Count < 1 )
-           // {
-               // MessageBox.Show("Found nothing!"); 
-           // }
-
-           // if (resultList.Count <= 2000 || diResult == DialogResult.Yes )
-           // {
-                InitListView();
-                foreach (var indexFile in resultList)
-                {
-                   
-                    listViewResult.UseWaitCursor = true; 
-                    listViewResult.BeginUpdate();
-                    var item = new ListViewItem(new string[] {"", indexFile.Folderk__BackingField, indexFile.Namek__BackingField, indexFile.Extensionk__BackingField});
-                    listViewResult.Items.Add(item);
-                    listViewResult.EndUpdate();
-                    
-                    listViewResult.UseWaitCursor = false; 
-                }
-
-            //}
-            //listViewResult.ListViewItemSorter = lvwColumnSorter;
+        {                          
+			InitListView();
+			foreach (var indexFile in resultList)
+			{
+			   
+				listViewResult.UseWaitCursor = true; 
+				listViewResult.BeginUpdate();
+				var item = new ListViewItem(new string[] {"", indexFile.Folderk__BackingField, indexFile.Namek__BackingField, indexFile.Extensionk__BackingField});
+				listViewResult.Items.Add(item);
+				listViewResult.EndUpdate();
+				
+				listViewResult.UseWaitCursor = false; 
+			}           
         }
 
         private void InitListView()
@@ -173,8 +141,6 @@ namespace UniSearch
             listViewResult.Columns.Add("path", 150);
             listViewResult.Columns.Add("Name", 150);
             listViewResult.Columns.Add("Extension", 70);
-
-
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -204,10 +170,6 @@ namespace UniSearch
             {
                 //TODO get server object and save adn use it  !!...  
             }
-
-
-
-
         }
     }
     
